@@ -8,18 +8,16 @@ chinese-utils for Minecrafting
 
 
 
-~~
-使用
---------------------
-### Maven依赖
-```xml
-<dependency>
-    <groupId>com.luhuiguo</groupId>
-    <artifactId>chinese-utils</artifactId>
-    <version>1.0</version>
-</dependency>
-```
-~~
+~~使用~~
+~~--------------------~~
+~~### Maven依赖~~
+~~```xml~~
+~~<dependency>~~
+   ~~<groupId>com.luhuiguo</groupId>~~
+    ~~<artifactId>chinese-utils</artifactId>~~
+    ~~<version>1.0</version>~~
+~~</dependency>~~
+~~```~~
 
 ### 命令行
 ```
@@ -48,19 +46,18 @@ chinese-utils for Minecrafting
     String Converter.TRADITIONAL.convert(String str);
 ```
 
-~~
-### 转拼音
-```java
- 	String ChineseUtils.toPinyin(String str, PinyinFormat format);
+~~### 转拼音~~
+~~```java~~
+ 	~~String ChineseUtils.toPinyin(String str, PinyinFormat format);~~
 
-    String[] Pinyin.INSTANCE.toUnformattedPinyin(char ch);
-    String[] Pinyin.INSTANCE.toFormattedPinyin(char ch, PinyinFormat format);
-    String Pinyin.INSTANCE.toPinyin(char ch);
-    String Pinyin.INSTANCE.toPinyin(char ch, PinyinFormat format);
-    void Pinyin.INSTANCE.convert(Reader reader, Writer writer, PinyinFormat format) throws IOException;
-    String Pinyin.INSTANCE.convert(String str, PinyinFormat format);
-```
-~~
+   ~~ String[] Pinyin.INSTANCE.toUnformattedPinyin(char ch);~~
+   ~~ String[] Pinyin.INSTANCE.toFormattedPinyin(char ch, PinyinFormat format);~~
+   ~~ String Pinyin.INSTANCE.toPinyin(char ch);~~
+    ~~String Pinyin.INSTANCE.toPinyin(char ch, PinyinFormat format);~~
+   ~~ void Pinyin.INSTANCE.convert(Reader reader, Writer writer, PinyinFormat format) throws IOException;~~
+   ~~ String Pinyin.INSTANCE.convert(String str, PinyinFormat format);~~
+~~```~~
+ 
 示例
 --------------------
 
@@ -71,33 +68,34 @@ chinese-utils for Minecrafting
 	s = "簡訊資料庫";
 	System.out.println(s + " => " + ChineseUtils.toSimplified(s));
 	s = "长江成长";
-	~~System.out.println(s + " => " + ChineseUtils.toPinyin(s) + " ("
-			+ ChineseUtils.toPinyin(s, PinyinFormat.UNICODE_PINYIN_FORMAT)
-			+ ") - "
-			+ ChineseUtils.toPinyin(s, PinyinFormat.ABBR_PINYIN_FORMAT));~~
+	~~System.out.println(s + " => " + ChineseUtils.toPinyin(s) + " ("~~
+			~~+ ChineseUtils.toPinyin(s, PinyinFormat.UNICODE_PINYIN_FORMAT)~~
+			~~+ ") - "~~
+			~~+ ChineseUtils.toPinyin(s, PinyinFormat.ABBR_PINYIN_FORMAT));~~
 ```
 将会输出
 ```
 头发发财 => 頭髮發財
 簡訊資料庫 => 短信数据库
-~~长江成长 => chang2 jiang1 cheng2 zhang3 (cháng jiāng chéng zhăng) - cjcz~~
 ```
+~~长江成长 => chang2 jiang1 cheng2 zhang3 (cháng jiāng chéng zhăng) - cjcz~~
+
 
 ~~多音字以及~~简繁体分歧
 --------------------
 目前已经整理了常用~~多音字词组和~~简繁体一些语言差异和一对多现象。
 
-~~比如多音字默认第一个读音，其他读音需要在字典文件中列出
-```
-#龟=gui1,jun1,qiu1
-#龟=gui1
+~~比如多音字默认第一个读音，其他读音需要在字典文件中列出~~
+~~```~~
+~~#龟=gui1,jun1,qiu1~~
+~~#龟=gui1~~
 
-#龟=jun1
-龟裂=jun1 lie4
+~~#龟=jun1~~
+~~龟裂=jun1 lie4~~
 
-#龟=qiu1
-龟兹=qiu1 ci2
-```~~
+~~#龟=qiu1~~
+~~龟兹=qiu1 ci2~~
+~~```~~
 简繁转换中一对多或者两地语言习惯照成的不同也需列在字典文件中
 ```
 # 计算机
