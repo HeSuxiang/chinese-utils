@@ -1,14 +1,10 @@
-chinese-utils
-=============
-项目将并入NLPchina
-https://github.com/NLPchina/
-请前往
-https://github.com/NLPchina/nlp-lang
+chinese-utils for Minecrafting
+===============================
+项目从 https://github.com/luhuiguo/chinese-utils fork而来
 
-=============
-很久以前的项目 http://chineseutils.sourceforge.net/ 升级
+代码被精简,只保留简繁转换, 添加游戏我的世界WIKI标准译名版本
 
-中文相关工具包，目前提供中文简繁体互转，以及中文转拼音。未来会提供中文分词。
+提供jar包
 
 
 
