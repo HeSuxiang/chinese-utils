@@ -15,7 +15,7 @@ import java.io.Reader;
 import java.io.StringReader;
 import java.io.StringWriter;
 import java.io.Writer;
-import java.nio.charset.StandardCharsets;
+import java.nio.charset.Charset;
 
 /**
  * 
@@ -26,10 +26,10 @@ public enum Converter {
 
 	public static final char CJK_UNIFIED_IDEOGRAPHS_START = '\u4E00';
 	public static final char CJK_UNIFIED_IDEOGRAPHS_END = '\u9FA5';
-	public static final String SIMPLIFIED_MAPPING_FILE = "/simp.txt";
-	public static final String SIMPLIFIED_LEXEMIC_MAPPING_FILE = "/simplified.txt";
-	public static final String TRADITIONAL_MAPPING_FILE = "/trad.txt";
-	public static final String TRADITIONAL_LEXEMIC_MAPPING_FILE = "/traditional.txt";
+	public static final String SIMPLIFIED_MAPPING_FILE = "/resources/simp.txt";
+	public static final String SIMPLIFIED_LEXEMIC_MAPPING_FILE = "/resources/simplified.txt";
+	public static final String TRADITIONAL_MAPPING_FILE = "/resources/trad.txt";
+	public static final String TRADITIONAL_LEXEMIC_MAPPING_FILE = "/resources/traditional.txt";
 
 	public static final String EMPTY = "";
 	public static final String SHARP = "#";
@@ -57,7 +57,11 @@ public enum Converter {
 		try {
 			BufferedReader in = new BufferedReader(new InputStreamReader(
 					new BufferedInputStream(getClass().getResourceAsStream(
-							mappingFile)), StandardCharsets.UTF_8));
+							mappingFile)), 
+							//StandardCharsets.UTF_8
+							//"UTF-8"
+							Charset.forName("UTF-8")
+							));
 
 			CharArrayWriter out = new CharArrayWriter();
 			String line = null;
@@ -86,7 +90,11 @@ public enum Converter {
 		try {
 			BufferedReader in = new BufferedReader(new InputStreamReader(
 					new BufferedInputStream(getClass().getResourceAsStream(
-							mappingFile)), StandardCharsets.UTF_8));
+							mappingFile)), 
+							//StandardCharsets.UTF_8
+							//"UTF-8"
+							Charset.forName("UTF-8")
+							));
 
 			String line = null;
 			while (null != (line = in.readLine())) {

@@ -8,9 +8,7 @@ package com.luhuiguo.chinese;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-
-import com.luhuiguo.chinese.pinyin.Pinyin;
-import com.luhuiguo.chinese.pinyin.PinyinFormat;
+ 
 
 /**
  * 中文相关工具类。
@@ -50,9 +48,9 @@ public class ChineseUtils {
 	 *            输出拼音的格式。
 	 * @return 转换后的中文拼音字符串。
 	 */
-	public static String toPinyin(String str, PinyinFormat format) {
-		return Pinyin.INSTANCE.convert(str, format);
-	}
+//	public static String toPinyin(String str, PinyinFormat format) {
+//		return Pinyin.INSTANCE.convert(str, format);
+//	}
 
 	/**
 	 * 转换成中文拼音字符串。
@@ -61,9 +59,9 @@ public class ChineseUtils {
 	 *            输入的字符串。
 	 * @return 转换后的中文拼音字符串。
 	 */
-	public static String toPinyin(String str) {
-		return Pinyin.INSTANCE.convert(str, PinyinFormat.DEFAULT_PINYIN_FORMAT);
-	}
+//	public static String toPinyin(String str) {
+//		return Pinyin.INSTANCE.convert(str, PinyinFormat.DEFAULT_PINYIN_FORMAT);
+//	}
 
 	/**
 	 * @param args
@@ -77,15 +75,21 @@ public class ChineseUtils {
 			textLine = readInputTextLine();
 			if (textLine == null || textLine.length() < 1) {
 				printHelp();
-			}else if ("q".equals(textLine)) {
+				printHit(mode);
+			}
+			if ("q".equals(textLine)) {
 				System.exit(0);
 			} else if ("t".equals(textLine)) {
 				mode = 2;
+
 			} else if ("s".equals(textLine)) {
 				mode = 1;
+
 			} else if ("".equals(textLine)) {
 				mode = 0;
+
 			} else {
+
 				switch (mode) {
 				case 1:
 					System.out.println("简体: "+ChineseUtils.toSimplified(textLine));
@@ -94,8 +98,8 @@ public class ChineseUtils {
 					System.out.println("繁体: "+ChineseUtils.toTraditional(textLine));
 					break;
 				default:
-					System.out
-							.println("拼音: "+ChineseUtils.toPinyin(textLine)+" ("+ChineseUtils.toPinyin(textLine,PinyinFormat.UNICODE_PINYIN_FORMAT)+")");
+//					System.out
+//							.println("拼音: "+ChineseUtils.toPinyin(textLine)+" ("+ChineseUtils.toPinyin(textLine,PinyinFormat.UNICODE_PINYIN_FORMAT)+")");
 					break;
 				}
 
