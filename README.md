@@ -46,15 +46,14 @@ chinese-utils for Minecrafting
     String Converter.TRADITIONAL.convert(String str);
 ```
 
-~~### 转拼音~~
-	~~String ChineseUtils.toPinyin(String str, PinyinFormat format);~~
-
-    ~~String[] Pinyin.INSTANCE.toUnformattedPinyin(char ch);~~
-    ~~String[] Pinyin.INSTANCE.toFormattedPinyin(char ch, PinyinFormat format);~~
-    ~~String Pinyin.INSTANCE.toPinyin(char ch);~~
-    ~~String Pinyin.INSTANCE.toPinyin(char ch, PinyinFormat format);~~
-    ~~void Pinyin.INSTANCE.convert(Reader reader, Writer writer, PinyinFormat format) throws IOException;~~
-    ~~String Pinyin.INSTANCE.convert(String str, PinyinFormat format);~~
+ ~~### 转拼音~~
+	 ~~String ChineseUtils.toPinyin(String str, PinyinFormat format);~~
+     ~~String[] Pinyin.INSTANCE.toUnformattedPinyin(char ch);~~
+     ~~String[] Pinyin.INSTANCE.toFormattedPinyin(char ch, PinyinFormat format);~~
+     ~~String Pinyin.INSTANCE.toPinyin(char ch);~~
+     ~~String Pinyin.INSTANCE.toPinyin(char ch, PinyinFormat format);~~
+     ~~void Pinyin.INSTANCE.convert(Reader reader, Writer writer, PinyinFormat format) throws IOException;~~
+     ~~String Pinyin.INSTANCE.convert(String str, PinyinFormat format);~~
 
  
 示例
@@ -68,10 +67,10 @@ chinese-utils for Minecrafting
 	System.out.println(s + " => " + ChineseUtils.toSimplified(s));
 	s = "长江成长";
 ```
-	~~System.out.println(s + " => " + ChineseUtils.toPinyin(s) + " ("~~
-			~~+ ChineseUtils.toPinyin(s, PinyinFormat.UNICODE_PINYIN_FORMAT)~~
-			~~+ ") - "~~
-			~~+ ChineseUtils.toPinyin(s, PinyinFormat.ABBR_PINYIN_FORMAT));~~
+	 ~~System.out.println(s + " => " + ChineseUtils.toPinyin(s) + " ("~~
+			 ~~+ ChineseUtils.toPinyin(s, PinyinFormat.UNICODE_PINYIN_FORMAT)~~
+			 ~~+ ") - "~~
+			 ~~+ ChineseUtils.toPinyin(s, PinyinFormat.ABBR_PINYIN_FORMAT));~~
  
 将会输出
 头发发财 => 頭髮發財
