@@ -47,7 +47,6 @@ chinese-utils for Minecrafting
 ```
 
 ~~### 转拼音~~
-~~```java~~
 	~~String ChineseUtils.toPinyin(String str, PinyinFormat format);~~
 
     ~~String[] Pinyin.INSTANCE.toUnformattedPinyin(char ch);~~
@@ -56,7 +55,7 @@ chinese-utils for Minecrafting
     ~~String Pinyin.INSTANCE.toPinyin(char ch, PinyinFormat format);~~
     ~~void Pinyin.INSTANCE.convert(Reader reader, Writer writer, PinyinFormat format) throws IOException;~~
     ~~String Pinyin.INSTANCE.convert(String str, PinyinFormat format);~~
-~~```~~
+
  
 示例
 --------------------
