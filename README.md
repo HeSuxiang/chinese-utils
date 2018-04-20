@@ -73,11 +73,11 @@ chinese-utils for Minecrafting
 			~~+ ChineseUtils.toPinyin(s, PinyinFormat.UNICODE_PINYIN_FORMAT)~~
 			~~+ ") - "~~
 			~~+ ChineseUtils.toPinyin(s, PinyinFormat.ABBR_PINYIN_FORMAT));~~
-```
+ 
 将会输出
 头发发财 => 頭髮發財
 簡訊資料庫 => 短信数据库
-```
+ 
 ~~长江成长 => chang2 jiang1 cheng2 zhang3 (cháng jiāng chéng zhăng) - cjcz~~
 
 
